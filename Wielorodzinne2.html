@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wielorodzinne</title>
+    <link rel="stylesheet" href="assets/css/themes3.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/kri sam domek z czerwonym punktem (1).png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="./assets/css/bootstrap.css" as="style">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <style>
+      .logo-bar {
+        height: 50px;
+      }
+      .nav-link.bigg {
+        font-weight: bold;
+      }
+
+      /* NOWE, BEZPIECZNE STYLE - BLOKUJĄ ROZJEŻDŻANIE SIĘ STRONY */
+      
+      /* Sekcja na film pod galerią */
+      .sekcja-dron {
+        max-width: 1140px;
+        margin: 30px auto 30px auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+      }
+      .kontener-film-169 {
+        width: 100%;
+        max-width: 800px; /* Optymalna szerokość dla filmu 16:9 na komputerach */
+        aspect-ratio: 16 / 9; /* Wymuszenie formatu panoramicznego 16:9 */
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        background-color: #000;
+      }
+      .kontener-film-169 video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Obraz ładnie wypełnia odtwarzacz bez zniekształceń */
+      }
+
+      /* Nadpisanie i wymuszenie równego układu dla zdjęć */
+      .galeria {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+        gap: 15px !important;
+        max-width: 1140px !important;
+        margin: 20px auto !important;
+        padding: 0 15px !important;
+      }
+      .galeria img {
+        width: 100% !important;
+        height: 200px !important; /* Stała wysokość dla każdego zdjęcia */
+        object-fit: cover !important; /* Ładne kadrowanie miniatury */
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease !important;
+        display: block !important;
+        margin: 0 !important;
+      }
+      .galeria img:hover {
+        transform: scale(1.03);
+      }
+    </style>
+</head>
+<body>
+
+<header id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <img src="./assets/img/Beznazwy-1.svg" class="logo-bar" alt="Logo">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Strona Główna</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">O nas</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#uslugi" class="nav-link">Oferta</a>
+          </li>
+           <li class="nav-item">
+            <a href="index.html#portfolio2" class="nav-link">Realizacje</a>
+          </li>
+           <li class="nav-item">
+            <a href="index.html#footer" class="nav-link">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a href="biezacerealizacje.html" class="nav-link">Bieżące Realizacje</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="galeria">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/1.jpg" alt="Zdjęcie 1" onclick="pokazZdjecie(0)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/2.jpg" alt="Zdjęcie 2" onclick="pokazZdjecie(1)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/33.jpg" alt="Zdjęcie 3" onclick="pokazZdjecie(2)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/4.jpg" alt="Zdjęcie 4" onclick="pokazZdjecie(3)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/5.jpg" alt="Zdjęcie 5" onclick="pokazZdjecie(4)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/6.jpg" alt="Zdjęcie 6" onclick="pokazZdjecie(5)">
+  
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260225_110504565.jpg" alt="Zdjęcie 7" onclick="pokazZdjecie(6)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260225_110606629.jpg" alt="Zdjęcie 8" onclick="pokazZdjecie(7)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260307_102853974.jpg" alt="Zdjęcie 9" onclick="pokazZdjecie(8)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260307_143107762.jpg" alt="Zdjęcie 10" onclick="pokazZdjecie(9)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260307_143113445.jpg" alt="Zdjęcie 11" onclick="pokazZdjecie(10)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260316_102147680.jpg" alt="Zdjęcie 12" onclick="pokazZdjecie(11)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260316_102346357.jpg" alt="Zdjęcie 13" onclick="pokazZdjecie(12)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260316_102417551.jpg" alt="Zdjęcie 14" onclick="pokazZdjecie(13)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260417_063110695.jpg" alt="Zdjęcie 15" onclick="pokazZdjecie(14)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260418_074031549.jpg" alt="Zdjęcie 16" onclick="pokazZdjecie(15)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260420_112005311.jpg" alt="Zdjęcie 17" onclick="pokazZdjecie(16)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260516_051304129.jpg" alt="Zdjęcie 18" onclick="pokazZdjecie(17)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260521_121204984.jpg" alt="Zdjęcie 19" onclick="pokazZdjecie(18)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260521_121207295.jpg" alt="Zdjęcie 20" onclick="pokazZdjecie(19)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260521_121210509.jpg" alt="Zdjęcie 21" onclick="pokazZdjecie(20)">
+  <img src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260609_053639223.jpg" alt="Zdjęcie 22" onclick="pokazZdjecie(21)">
+</div>
+
+<div class="sekcja-dron">
+  <div class="kontener-film-169">
+    <video autoplay muted loop playsinline controls>
+      <source src="assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/VID-20260524-WA0011.mov" type="video/mp4">
+      Twoja przeglądarka nie obsługuje odtwarzacza wideo.
+    </video>
+  </div>
+</div>
+
+<div id="lightbox" onclick="ukryjZdjecie()">
+  <span class="strzalka lewa" onclick="prevZdjecie(event)">&#10094;</span>
+  <img id="lightbox-img" src="" alt="duże zdjęcie">
+  <span class="strzalka prawa" onclick="nextZdjecie(event)">&#10095;</span>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<script>
+  const zdjecia = [
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/1.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/2.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/33.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/4.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/5.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/6.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260225_110504565.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260225_110606629.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260307_102853974.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260307_143107762.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260307_143113445.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260316_102147680.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260316_102346357.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260316_102417551.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260417_063110695.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260418_074031549.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260420_112005311.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260516_051304129.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260521_121204984.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260521_121207295.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260521_121210509.jpg",
+    "assets/img/realizacje/BUDOWNICTWO WIELORODZINNE/PXL_20260609_053639223.jpg"
+  ];
+  let aktualnyIndex = 0;
+
+  function pokazZdjecie(index) {
+    aktualnyIndex = index;
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    img.src = zdjecia[index];
+    lightbox.style.display = "flex";
+  }
+
+  function ukryjZdjecie() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function prevZdjecie(e) {
+    e.stopPropagation();
+    aktualnyIndex = (aktualnyIndex - 1 + zdjecia.length) % zdjecia.length;
+    document.getElementById("lightbox-img").src = zdjecia[aktualnyIndex];
+  }
+
+  function nextZdjecie(e) {
+    e.stopPropagation();
+    aktualnyIndex = (aktualnyIndex + 1) % zdjecia.length;
+    document.getElementById("lightbox-img").src = zdjecia[aktualnyIndex];
+  }
+</script>
+
+<script>
+document.addEventListener("keydown", function (e) {
+  const lightbox = document.getElementById("lightbox");
+
+  if (lightbox.style.display !== "flex") return;
+
+  if (e.key === "ArrowRight") {
+    nextZdjecie(e);
+  }
+
+  if (e.key === "ArrowLeft") {
+    prevZdjecie(e);
+  }
+
+  if (e.key === "Escape") {
+    ukryjZdjecie();
+  }
+});
+</script>
+
+<script>
+let startX = 0;
+let endX = 0;
+
+const lightbox = document.getElementById("lightbox");
+
+lightbox.addEventListener("touchstart", function (e) {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", function (e) {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const diff = startX - endX;
+
+  if (Math.abs(diff) < 50) return;
+
+  if (diff > 0) {
+    nextZdjecie(new Event("swipe"));
+  } else {
+    prevZdjecie(new Event("swipe"));
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: large;
+  line-height: 1;
+  color: #2d2f38;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= GALERIA ================= */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= LIGHTBOX ================= */
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* ================= STRZAŁKI – MNIEJSZE, CZARNE ================= */
+
+.strzalka {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;          /* było 60px → ~20% mniej */
+  height: 48px;
+  background: #000000; /* czarne tło */
+  color: #ffffff;      /* biała strzałka */
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0;    /* kwadrat */
+  z-index: 1010;
+  transition: background 0.2s ease;
+}
+
+.strzalka:hover {
+  background: #222222;
+}
+
+.strzalka.lewa {
+  left: 30px;
+}
+
+.strzalka.prawa {
+  right: 30px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strzalka {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .strzalka.lewa {
+    left: 10px;
+  }
+
+  .strzalka.prawa {
+    right: 10px;
+  }
+}

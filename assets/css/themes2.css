@@ -1,0 +1,131 @@
+/* Reset i podstawy */
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #000 !important;
+    margin-left: 15px;
+}
+
+/* Nagłówek strony (Hero) */
+.realizacje-hero {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 50px;
+}
+
+.realizacje-hero h1 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 10px;
+    color: #000;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.breadcrumb a {
+    color: #999;
+}
+
+/* Kontener kafelków - Grid */
+.zdjecia-strony-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Karta projektu */
+.zdjecia-strony {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important;
+    border: 1px solid #eee;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.zdjecia-strony:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border-color: #000;
+}
+
+/* Obrazek w karcie */
+.card-img-wrapper {
+    overflow: hidden;
+    height: 260px;
+}
+
+.zdjecia-strony img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.zdjecia-strony:hover img {
+    transform: scale(1.08);
+}
+
+/* Treść w karcie */
+.project-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.project-info span {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+/* Przycisk akcji */
+.btn-action {
+    border: 1px solid #000;
+    padding: 12px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.zdjecia-strony:hover .btn-action {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .realizacje-hero h1 { font-size: 2rem; }
+    .zdjecia-strony-container { grid-template-columns: 1fr; }
+}
